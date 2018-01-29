@@ -7,7 +7,7 @@ test('check if the promise is rejected', () => {
   })
 })
 
-test('chack if fetchData returns a promise object', () => {
+test('check if fetchData returns a promise object', () => {
   const result = fetchData()
   expect(result).toBeInstanceOf(Promise)
 })
