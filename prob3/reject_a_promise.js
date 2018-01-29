@@ -1,14 +1,27 @@
-const promise = new Promise((fulfill, reject) => {
-  const gotError = () => {
-    reject(Error('REJECTED!'))
-  }
+// const promise = new Promise((fulfill, reject) => {
+//   const gotError = () => {
+//     reject(Error('REJECTED!'))
+//   }
+//
+//   setTimeout(gotError, 300)
+// })
+//
+// const onFulfilled = undefined
+// const onRejected = (error) => {
+//   console.log(error.message)
+// }
+//
+// promise.then(onFulfilled, onRejected)
 
-  setTimeout(gotError, 300)
-})
+const fetchData = () => {
+  const promise = new Promise((fulfill, reject) => {
+    const gotError = () => {
+      reject(Error('REJECTED!'))
+    }
+    setTimeout(gotError, 300)
+  })
 
-const onFulfilled = undefined
-const onRejected = (error) => {
-  console.log(error.message)
+  return promise
 }
 
-promise.then(onFulfilled, onRejected)
+module.exports = fetchData
