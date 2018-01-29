@@ -6,3 +6,8 @@ test('the fetched data is FULFILLED', () => {
     expect(data).toBe('FULFILLED!')
   })
 })
+
+test('chack if fetchData return a promise object', () => {
+  const result = fetchData()
+  expect(result).toBeInstanceOf(Promise)
+})
