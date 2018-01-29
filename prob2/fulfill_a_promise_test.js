@@ -7,7 +7,7 @@ test('check if the fetched data is FULFILLED', () => {
   })
 })
 
-test('chack if fetchData return a promise object', () => {
+test('chack if fetchData returns a promise object', () => {
   const result = fetchData()
   expect(result).toBeInstanceOf(Promise)
 })
